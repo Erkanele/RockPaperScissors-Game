@@ -7,6 +7,7 @@ purpose.
 
 
 ## Installation
+- Build war file using 'mvn clean package' in terminal
 - Configuration is available in resources/application.properties file where it's possible to change port,
   debug output or Swagger UI path for the game for example.
 ## Usage
