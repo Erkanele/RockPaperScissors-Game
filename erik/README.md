@@ -32,3 +32,4 @@ purpose.
    execute the GET request. Then the game status will be showed.
 
 ## Tests
+No available tests yet.. To be implemented.
