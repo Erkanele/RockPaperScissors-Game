@@ -12,7 +12,6 @@ public class Player {
         private Result result;
 
         public Player(String name) {
-
                 this.name = name;
         }
 
@@ -31,7 +30,6 @@ public class Player {
                 return state;
         }
         public void setState(State state) {
-
                 this.state = state;
         }
 

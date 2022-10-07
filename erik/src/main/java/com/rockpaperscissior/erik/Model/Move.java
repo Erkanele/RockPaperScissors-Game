@@ -3,7 +3,7 @@ package com.rockpaperscissior.erik.Model;
 import java.util.Arrays;
 
 /**
- * The allowed moves for a player
+ * Enum class that represent the possible moves in the game.
  */
 
 public enum Move {
@@ -28,14 +28,20 @@ public enum Move {
         },
         DEFAULT("DEFAULT") {
 
-                public boolean winsOver(Move move) { return(DEFAULT == move);}
+                public boolean winsOver(Move move) {
+                        return(DEFAULT == move);}
         };
 
         private final String label;
-
+        /**
+         * Enum class that represent the possible moves in the game.
+         */
         Move(String label) {
                 this.label = label;
         }
+        /**
+         * Method to set a move to default so not any NPE is thrown.
+         */
         public static Move defaultMove(String stringToMatch) {
                 return Arrays.stream(Move.values()).filter(aEnum -> aEnum.label.equals(stringToMatch)).findFirst().orElse(Move.DEFAULT);
         }

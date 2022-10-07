@@ -3,7 +3,7 @@ package com.rockpaperscissior.erik.Model;
 import java.util.Arrays;
 
 /**
- * The game states
+ * Enum class that holds the different states in the game.
  */
 
 public enum State {
@@ -18,8 +18,10 @@ public enum State {
 
                 this.label = label;
         }
-
+        /**
+         * Method to set a state to ONGOING when a player has joined a game so not any NPE is thrown.
+         */
         public static State defaultState(String stringToMatch) {
-                return Arrays.stream(State.values()).filter(aEnum -> aEnum.label.equals(stringToMatch)).findFirst().orElse(State.ONGOING);
+                return Arrays.stream(State.values()).filter(aEnum -> aEnum.label.equals(stringToMatch)).findFirst().orElse(State.STARTED);
         }
 }

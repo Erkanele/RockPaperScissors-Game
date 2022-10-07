@@ -1,7 +1,7 @@
 package com.rockpaperscissior.erik.Model;
 
 /**
- * Result of a game
+ * Enum class that represent the possible Results in the game
  */
 
 public enum Result {
