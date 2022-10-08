@@ -33,4 +33,8 @@ purpose.
    execute the GET request. Then the game status will be showed.
 
 ## Tests
-No available tests yet.. To be implemented.
+- Run tests from IDE or by command line by running 'mvnw tests'
+
+
+1. TestingWebbApplicationTests: Testing if application context can start.
+2. SmokeTest: Simple smoke tests to verify functionality of GameController Class
