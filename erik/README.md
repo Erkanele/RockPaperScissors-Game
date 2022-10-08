@@ -37,4 +37,4 @@ purpose.
 
 
 1. TestingWebbApplicationTests: Testing if application context can start.
-2. SmokeTest: Simple smoke tests to 
+2. SmokeTest: Simple smoke tests to verify functionality of GameController Class
