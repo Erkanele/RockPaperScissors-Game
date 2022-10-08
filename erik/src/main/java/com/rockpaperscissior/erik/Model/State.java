@@ -22,6 +22,7 @@ public enum State {
          * Method to set a state to ONGOING when a player has joined a game so not any NPE is thrown.
          */
         public static State defaultState(String stringToMatch) {
-                return Arrays.stream(State.values()).filter(aEnum -> aEnum.label.equals(stringToMatch)).findFirst().orElse(State.STARTED);
+                return Arrays.stream(State.values()).filter(aEnum -> aEnum.label.equals(stringToMatch))
+                                .findFirst().orElse(State.STARTED);
         }
 }

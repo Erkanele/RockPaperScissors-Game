@@ -43,7 +43,8 @@ public class GameController {
                 game.setPlayer1(player1);
 
 
-                return ResponseEntity.status(HttpStatus.CREATED).body("Player 1 joined: " + player1.getName() + " " + game.getGameID() + "\n");
+                        return ResponseEntity.status(HttpStatus.CREATED).body("Player 1 joined: " + player1.getName()
+                                + " " + game.getGameID() + "\n");
         }
 
         /**
@@ -67,7 +68,7 @@ public class GameController {
 
                 }
                 game.setPlayer2(player2);
-                return ResponseEntity.status(HttpStatus.OK).body("Player 2 joined: " + player2.getName()+ "\n");
+                        return ResponseEntity.status(HttpStatus.OK).body("Player 2 joined: " + player2.getName()+ "\n");
         }
 
         /**
@@ -86,14 +87,16 @@ public class GameController {
                         player1.setMove(Move.valueOf(body.get("move")));
                         player1.setState(State.ENDED);
                         game.setGameState(State.ONGOING);
-                        return ResponseEntity.status(HttpStatus.OK).body("Player 1: " + player1.getName() + " made a move: " + player1.getMove().toString()+ "\n");
+                        return ResponseEntity.status(HttpStatus.OK).body("Player 1: " + player1.getName() +
+                                " made a move: " + player1.getMove().toString()+ "\n");
 
                 }
                 else if (body.get("name").equals(player2.getName())) {
                         player2.setMove(Move.valueOf(body.get("move")));
                         player2.setState(State.ENDED);
                         game.setGameState(State.ONGOING);
-                        return ResponseEntity.status(HttpStatus.OK).body("Player 2: " + player2.getName() + " made a move " + player2.getMove().toString()+ "\n");
+                        return ResponseEntity.status(HttpStatus.OK).body("Player 2: " + player2.getName() +
+                                " made a move " + player2.getMove().toString()+ "\n");
                 }
                 else {
                         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Player is not part of this game"+ "\n");
@@ -108,13 +111,15 @@ public class GameController {
         @GetMapping("/api/games/{id}")
         public ResponseEntity<String> checkState(@PathVariable UUID id) {
                 game.evaluatePlayerStatesAndSetGameState();
+
                 if(!id.equals(game.getGameID())) {
 
                         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(gameIDNotFound + "\n");
                 }
                 else if (game.getPlayer2() == null){
 
-                        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Player: 2 needs to connect before any result is given"+ "\n");
+                        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Player: 2 needs to connect" +
+                                " before any result is given"+ "\n");
                 }
                 else if (game.getGameState() != State.ENDED) {
 
@@ -124,6 +129,6 @@ public class GameController {
                 game.hasPlayersMadeMoves(player1, player2);
 
 
-                return ResponseEntity.status(HttpStatus.OK).body(game.gameString());
+                        return ResponseEntity.status(HttpStatus.OK).body(game.gameString());
         }
 }

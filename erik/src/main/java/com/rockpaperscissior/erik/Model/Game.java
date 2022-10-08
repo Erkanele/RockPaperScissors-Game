@@ -126,12 +126,4 @@ public class Game {
                         gameState = State.ENDED;
                 }
         }
-        public void noSneakPeakOnMoves(){
-                if (getGameState() != State.ENDED){
-                        gameString();
-                }
-                else
-                        playerString();
-
-        }
 }

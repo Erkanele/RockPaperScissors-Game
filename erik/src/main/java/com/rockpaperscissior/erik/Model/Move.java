@@ -43,7 +43,8 @@ public enum Move {
          * Method to set a move to default so not any NPE is thrown.
          */
         public static Move defaultMove(String stringToMatch) {
-                return Arrays.stream(Move.values()).filter(aEnum -> aEnum.label.equals(stringToMatch)).findFirst().orElse(Move.DEFAULT);
+                return Arrays.stream(Move.values()).filter(aEnum -> aEnum.label.equals(stringToMatch))
+                        .findFirst().orElse(Move.DEFAULT);
         }
 
         public abstract boolean winsOver(Move move);
