@@ -1,13 +1,17 @@
 package com.rockpaperscissior.erik;
 
 import org.junit.jupiter.api.Test;
+
 import org.springframework.boot.test.context.SpringBootTest;
 
+/**
+ * Testing if application are able to start
+ */
 @SpringBootTest
-class ErikApplicationTests {
+public class TestingWebbApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }

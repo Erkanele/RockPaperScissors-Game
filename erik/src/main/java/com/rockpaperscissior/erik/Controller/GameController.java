@@ -118,7 +118,7 @@ public class GameController {
                 }
                 else if (game.getGameState() != State.ENDED) {
 
-                        return ResponseEntity.status(HttpStatus.OK).body(game.playersToString());
+                        return ResponseEntity.status(HttpStatus.OK).body(game.playerString());
                 }
                 game.evaluateMoves(player1, player2);
                 game.hasPlayersMadeMoves(player1, player2);

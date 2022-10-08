@@ -64,7 +64,7 @@ public class Game {
 
         }
 
-        public String playersToString() {
+        public String playerString() {
                 return "GameID: " + gameID +
                         "\nGame State: " + gameState +
                         "\nPlayer 1: " + player1.getName() +
@@ -74,16 +74,10 @@ public class Game {
                         "\nResult: " + "Player 1 - " + player1.getResult() + ", Player 2 - " + player2.getResult() + "\n";
 
         }
-
-
-        /*public void hasBothPlayersJoined(Player player1, Player player2){
-                if ()
-
-        }*/
         /**
          * Method to evaluate if any moves have been made and set the playerState accordingly.
-         * @param player1
-         * @param player2
+         * @param player1 Checking if player 1 has made an move and setting result accordingly
+         * @param player2 Checking if player 1 has made an move and setting result accordingly
          */
         public void hasPlayersMadeMoves(Player player1, Player player2){
                 if (player1.getMove() != Move.DEFAULT){
@@ -100,8 +94,8 @@ public class Game {
 
         /**
          * Method to Evaluate the moves of both players and set the result accordingly.
-         * @param player1
-         * @param player2
+         * @param player1 Checking what move Player 1 has made and set the game result accordingly
+         * @param player2 Checking what move Player 2 has made and set the game result accordingly
          */
         public void evaluateMoves(Player player1, Player player2) {
 
@@ -137,7 +131,7 @@ public class Game {
                         gameString();
                 }
                 else
-                        playersToString();
+                        playerString();
 
         }
 }
