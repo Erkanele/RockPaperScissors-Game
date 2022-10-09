@@ -28,8 +28,7 @@ public enum Move {
         },
         DEFAULT("DEFAULT") {
 
-                public boolean winsOver(Move move) {
-                        return(DEFAULT == move);}
+                public boolean winsOver(Move move) {return(DEFAULT == move);}
         };
 
         private final String label;

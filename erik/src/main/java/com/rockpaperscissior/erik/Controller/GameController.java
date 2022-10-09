@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.Map;
 import java.util.UUID;
 
@@ -23,7 +22,7 @@ public class GameController {
         public Game game;
         public Player player1;
         public Player player2;
-        public String gameIDNotFound = " The Game ID entered was not found, try again please. ";
+        public String gameIDNotFound = " The Game ID entered was not found. Please try again. ";
 
 
         /**
@@ -44,6 +43,7 @@ public class GameController {
 
 
                         return ResponseEntity.status(HttpStatus.CREATED).body("Player 1 joined: " + player1.getName()
+                                .substring(0,1).toUpperCase() + player1.getName().substring(1)
                                 + " " + game.getGameID() + "\n");
         }
 
@@ -68,7 +68,8 @@ public class GameController {
 
                 }
                 game.setPlayer2(player2);
-                        return ResponseEntity.status(HttpStatus.OK).body("Player 2 joined: " + player2.getName()+ "\n");
+                        return ResponseEntity.status(HttpStatus.OK).body("Player 2 joined: " + player2.getName()
+                                .substring(0,1).toUpperCase() + player2.getName().substring(1) + " " + "\n");
         }
 
         /**
@@ -87,16 +88,18 @@ public class GameController {
                         player1.setMove(Move.valueOf(body.get("move")));
                         player1.setState(State.ENDED);
                         game.setGameState(State.ONGOING);
-                        return ResponseEntity.status(HttpStatus.OK).body("Player 1: " + player1.getName() +
-                                " made a move: " + player1.getMove().toString()+ "\n");
+                        return ResponseEntity.status(HttpStatus.OK).body("Player 1: " + player1.getName().substring(0,1)
+                                .toUpperCase() + player1.getName().substring(1) +
+                                " chooses " + player1.getMove().toString()+ "\n");
 
                 }
                 else if (body.get("name").equals(player2.getName())) {
                         player2.setMove(Move.valueOf(body.get("move")));
                         player2.setState(State.ENDED);
                         game.setGameState(State.ONGOING);
-                        return ResponseEntity.status(HttpStatus.OK).body("Player 2: " + player2.getName() +
-                                " made a move " + player2.getMove().toString()+ "\n");
+                        return ResponseEntity.status(HttpStatus.OK).body("Player 2: " + player2.getName().substring(0,1)
+                                .toUpperCase() + player2.getName().substring(1) +
+                                " chooses " + player2.getMove().toString()+ "\n");
                 }
                 else {
                         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Player is not part of this game"+ "\n");
@@ -106,7 +109,7 @@ public class GameController {
         /**
          * GET-request method for the state of the game, each player and the result.
          * @param id game ID
-         * @return Status of the game, player status and the result
+         * @return Status of the game, player status and the result or a bad request return.
          */
         @GetMapping("/api/games/{id}")
         public ResponseEntity<String> checkState(@PathVariable UUID id) {
@@ -126,8 +129,6 @@ public class GameController {
                         return ResponseEntity.status(HttpStatus.OK).body(game.playerString());
                 }
                 game.evaluateMoves(player1, player2);
-                game.hasPlayersMadeMoves(player1, player2);
-
 
                         return ResponseEntity.status(HttpStatus.OK).body(game.gameString());
         }

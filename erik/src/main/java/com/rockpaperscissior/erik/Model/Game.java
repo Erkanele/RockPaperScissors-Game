@@ -54,42 +54,29 @@ public class Game {
         public String gameString() {
                 return  "GameID: " + gameID +
                         "\nGame State: " + gameState +
-                        "\nPlayer 1: " + player1.getName() +
+                        "\nPlayer 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
                         "\nPlayer 1 Status: " + player1.getState() +
                         "\nPlayer 1 Move: " + player1.getMove() +
-                        "\nPlayer 2: " + player2.getName() +
+                        "\nPlayer 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) +
                         "\nPlayer 2 Status: " + player2.getState() +
                         "\nPlayer 2 Move: " + player2.getMove() +
                         "\nResult: " + "Player 1 - " + player1.getResult() + ", Player 2 - " + player2.getResult() + "\n";
 
         }
+        /**
+         * Method to Create a String representation of current player status
+         * @return String representation of the player status
+         */
 
         public String playerString() {
                 return "GameID: " + gameID +
                         "\nGame State: " + gameState +
-                        "\nPlayer 1: " + player1.getName() +
+                        "\nPlayer 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
                         "\nPlayer 1 Status: " + player1.getState() +
-                        "\nPlayer 2: " + player2.getName() +
+                        "\nPlayer 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) +
                         "\nPlayer 2 Status: " + player2.getState() +
                         "\nResult: " + "Player 1 - " + player1.getResult() + ", Player 2 - " + player2.getResult() + "\n";
 
-        }
-        /**
-         * Method to evaluate if any moves have been made and set the playerState accordingly.
-         * @param player1 Checking if player 1 has made an move and setting result accordingly
-         * @param player2 Checking if player 1 has made an move and setting result accordingly
-         */
-        public void hasPlayersMadeMoves(Player player1, Player player2){
-                if (player1.getMove() != Move.DEFAULT){
-                        player1.setState(State.ENDED);
-                        player1.setResult(player1.getResult());
-                }
-                if (player2.getMove() != Move.DEFAULT){
-                        player2.setState(State.ENDED);
-                        player2.setResult(player2.getResult());
-                }
-                else
-                        player1.setResult(Result.WAITING);
         }
 
         /**
