@@ -19,7 +19,8 @@ public enum State {
                 this.label = label;
         }
         /**
-         * Method to set a state to ONGOING when a player has joined a game so not any NPE is thrown.
+         * Method to set a state to Started when a player has joined a game so not any NPE is thrown when sending
+         * the GET-request.
          */
         public static State defaultState(String stringToMatch) {
                 return Arrays.stream(State.values()).filter(aEnum -> aEnum.label.equals(stringToMatch))

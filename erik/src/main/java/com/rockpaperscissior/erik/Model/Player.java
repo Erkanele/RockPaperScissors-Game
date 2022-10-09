@@ -1,7 +1,7 @@
 package com.rockpaperscissior.erik.Model;
 
 /**
- * Representation of a player
+ * Class that represent the player
  */
 
 public class Player {

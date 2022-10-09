@@ -27,14 +27,14 @@ public enum Move {
 
         },
         DEFAULT("DEFAULT") {
+                /**
+                 * Method to evaluate and set which move win.
+                 */
 
                 public boolean winsOver(Move move) {return(DEFAULT == move);}
         };
 
         private final String label;
-        /**
-         * Enum class that represent the possible moves in the game.
-         */
         Move(String label) {
                 this.label = label;
         }
