@@ -1,9 +1,7 @@
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Exceptions/CustomRequestInterceptor.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Model/Player.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Model/State.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Model/Game.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Model/Move.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Exceptions/RequestAppConfig.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/RockPaperScissorApp.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Controller/GameController.java
-/home/zeleeri/eiffel/openSource/freetime/rockPprSciss/erik/src/main/java/com/rockpaperscissior/erik/Model/Result.java
+C:\dev\RockPaperScissors-Game\erik\src\main\java\com\example\rock_paper_scissors\Controller\GameController.java
+C:\dev\RockPaperScissors-Game\erik\src\main\java\com\example\rock_paper_scissors\Model\State.java
+C:\dev\RockPaperScissors-Game\erik\src\main\java\com\example\rock_paper_scissors\Model\Player.java
+C:\dev\RockPaperScissors-Game\erik\src\main\java\com\example\rock_paper_scissors\Model\Game.java
+C:\dev\RockPaperScissors-Game\erik\src\main\java\com\example\rock_paper_scissors\Model\Move.java
+C:\dev\RockPaperScissors-Game\erik\src\main\java\com\example\rock_paper_scissors\Model\Result.java
+C:\dev\RockPaperScissors-Game\erik\src\main\java\com\example\rock_paper_scissors\RockPaperScissorApp.java
