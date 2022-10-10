@@ -1,4 +1,4 @@
-package com.rockpaperscissior.erik;
+package com.example.rock_paper_scissors;
 
 import org.junit.jupiter.api.Test;
 

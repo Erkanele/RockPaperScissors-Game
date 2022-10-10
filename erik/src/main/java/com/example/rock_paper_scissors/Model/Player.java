@@ -1,4 +1,4 @@
-package com.rockpaperscissior.erik.Model;
+package com.example.rock_paper_scissors.Model;
 
 /**
  * Class that represent the player

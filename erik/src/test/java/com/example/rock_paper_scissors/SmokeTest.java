@@ -1,6 +1,6 @@
-package com.rockpaperscissior.erik;
+package com.example.rock_paper_scissors;
 
-import com.rockpaperscissior.erik.Controller.GameController;
+import com.example.rock_paper_scissors.Controller.GameController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

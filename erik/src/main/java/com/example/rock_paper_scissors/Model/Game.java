@@ -1,4 +1,5 @@
-package com.rockpaperscissior.erik.Model;
+package com.example.rock_paper_scissors.Model;
+
 import java.util.UUID;
 
 /**
@@ -53,14 +54,16 @@ public class Game {
 
         public String gameString() {
                 return  "GameID: " + gameID +
-                        "\nGame State: " + gameState +
-                        "\nPlayer 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
-                        "\nPlayer 1 Status: " + player1.getState() +
-                        "\nPlayer 1 Move: " + player1.getMove() +
-                        "\nPlayer 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) +
-                        "\nPlayer 2 Status: " + player2.getState() +
-                        "\nPlayer 2 Move: " + player2.getMove() +
-                        "\nResult: " + "Player 1 - " + player1.getResult() + ", Player 2 - " + player2.getResult() + "\n";
+                        "\n Game State: " + gameState +
+                        "\n Player 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
+                        "\n Player 1 Status: " + player1.getState() +
+                        "\n Player 1 Move: " + player1.getMove() +
+                        "\n Player 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) +
+                        "\n Player 2 Status: " + player2.getState() +
+                        "\n Player 2 Move: " + player2.getMove() +
+                        "\n Result: " + "Player 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
+                        ": " + player1.getResult() + " - " +
+                        " Player 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) + ": " + player2.getResult();
 
         }
         /**
@@ -70,12 +73,14 @@ public class Game {
 
         public String playerString() {
                 return "GameID: " + gameID +
-                        "\nGame State: " + gameState +
-                        "\nPlayer 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
-                        "\nPlayer 1 Status: " + player1.getState() +
-                        "\nPlayer 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) +
-                        "\nPlayer 2 Status: " + player2.getState() +
-                        "\nResult: " + "Player 1 - " + player1.getResult() + ", Player 2 - " + player2.getResult() + "\n";
+                        "\n Game State: " + gameState +
+                        "\n Player 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
+                        "\n Player 1 Status: " + player1.getState() +
+                        "\n Player 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) +
+                        "\n Player 2 Status: " + player2.getState() +
+                        "\n Result: " + "Player 1: " + player1.getName().substring(0,1).toUpperCase() + player1.getName().substring(1) +
+                        ": " + player1.getResult() + " - "
+                        + " Player 2: " + player2.getName().substring(0,1).toUpperCase() + player2.getName().substring(1) + ": " + player2.getResult();
 
         }
 
